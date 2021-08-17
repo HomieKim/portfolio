@@ -96,6 +96,8 @@
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  position: sticky;
+  top: 0;
 }
 
 .navbar__menu{
