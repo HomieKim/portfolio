@@ -100,6 +100,7 @@
   padding: 16px;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
 
 .navbar__menu{
@@ -319,6 +320,7 @@
   width: 300px;
   height: 270px;
   background-color:var(--color-light-white);
+  z-index: 1;
 }
 .project__img{
   max-width: 100%;
