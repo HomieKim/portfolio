@@ -184,48 +184,48 @@
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-            <button class="categories__btn active">All <span class="categories__cnt">6</span></button>
-            <button class="categories__btn">Front-end <span class="categories__cnt">2</span></button>
-            <button class="categories__btn">Back-end <span class="categories__cnt">2</span></button>
-            <button class="categories__btn">Mobile <span class="categories__cnt">2</span></button>
+            <button class="categories__btn active" data-filter="*">All <span class="categories__cnt">6</span></button>
+            <button class="categories__btn" data-filter="Front-end">Front-end <span class="categories__cnt">2</span></button>
+            <button class="categories__btn" data-filter="Back-end">Back-end <span class="categories__cnt">2</span></button>
+            <button class="categories__btn" data-filter="Mobile">Mobile <span class="categories__cnt">2</span></button>
         </div>
         <div class="work__projects">
-            <a href="https://github.com/HomieKim" class="project" target="blank">
+            <a href="https://github.com/HomieKim" class="project" target="blank" data-type="Front-end">
                 <img src="imgs/projects/project1.png" class="project__img" alt="project1"/>
                 <div class="project__description">
                     <h3>Project1</h3>
                     <span>Sample description1</span>
                 </div>
             </a>
-            <a href="https://github.com/HomieKim" class="project" target="blank">
+            <a href="https://github.com/HomieKim" class="project" target="blank" data-type="Front-end">
                 <img src="imgs/projects/project2.png" class="project__img" alt="project2"/>
                 <div class="project__description">
                     <h3>Project2</h3>
                     <span>Sample description2</span>
                 </div>
             </a>
-            <a href="https://github.com/HomieKim" class="project" target="blank">
+            <a href="https://github.com/HomieKim" class="project" target="blank" data-type="Back-end">
                 <img src="imgs/projects/project3.png"  class="project__img" alt="project3"/>
                 <div class="project__description">
                     <h3>Project3</h3>
                     <span>Sample description3</span>
                 </div>
             </a>
-            <a href="https://github.com/HomieKim" class="project" target="blank">
+            <a href="https://github.com/HomieKim" class="project" target="blank" data-type="Back-end">
                 <img src="imgs/projects/project4.png" class="project__img" alt="project4"/>
                 <div class="project__description">
                     <h3>project4</h3>
                     <span>Sample description4</span>
                 </div>
             </a>
-            <a href="https://github.com/HomieKim" class="project" target="blank">
+            <a href="https://github.com/HomieKim" class="project" target="blank" data-type="Mobile">
                 <img src="imgs/projects/project5.png" class="project__img" alt="project5"/>
                 <div class="project__description">
                     <h3>Project5</h3>
                     <span>Sample description5</span>
                 </div>
             </a>
-            <a href="https://github.com/HomieKim" class="project" target="blank">
+            <a href="https://github.com/HomieKim" class="project" target="blank" data-type="Mobile">
                 <img src="imgs/projects/project6.png" class="project__img" alt="project6"/>
                 <div class="project__description">
                     <h3>Project6</h3>
@@ -278,6 +278,9 @@
         </div>
         <p class="contact__right">Homie's protfolio</p>
     </section>
-
+    <button class="arrow_up">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
 </body>
 </html>

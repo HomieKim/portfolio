@@ -319,6 +319,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transition: all var(--animation--duration) ease-out;
+}
+.work__projects.ani-out{
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 .project{
   position: relative;
@@ -329,7 +334,12 @@
   width: 300px;
   height: 270px;
   background-color:var(--color-light-white);
+
 }
+.project.invisible{
+  display: none;
+}
+
 .project__img{
   max-width: 100%;
   max-height: 100%;
@@ -429,6 +439,26 @@
 .contact__links i:hover{
   transform: scale(1.2);
   color: var(--color-dark-white);
+}
+
+/* Arrow-up button*/
+.arrow_up{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-dark-beige);
+  font-size: 24px;
+  color: var(--color-white);
+  opacity: 0;
+  transition: all var(--animation--duration) ease-in;
+  pointer-events: none;
+}
+.arrow_up.visible{
+  opacity: 1;
+  pointer-events: auto;
 }
 
 @media screen and (max-width: 768px){

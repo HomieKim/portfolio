@@ -48,6 +48,58 @@ contact_btn.addEventListener("mouseleave",()=>{
     contact_btn.style.opacity = 1- window.scrollY / home_height;
 });
 
+// show arrow-up button when scrolling
+
+const arrowup_btn = document.querySelector(".arrow_up");
+document.addEventListener("scroll", () => {
+    if(window.scrollY > home_height /2 ){
+        arrowup_btn.classList.add("visible");
+    }else{
+        arrowup_btn.classList.remove("visible");
+    }
+});
+const handleArrowUp = () => {
+
+    scrollintoViews('#Home');
+
+    arrowup_btn.removeEventListener('click', handleArrowUp);
+
+    setTimeout(() => {
+
+    arrowup_btn.addEventListener('click', handleArrowUp);
+
+    }, 1000);
+
+};
+arrowup_btn.addEventListener("click", handleArrowUp);
+
+// project filtering
+const work__btn__container = document.querySelector(".work__categories");
+const work__projects__cotainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+
+work__btn__container.addEventListener("click", (event)=>{
+    const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+    if(filter === null){
+        return;
+    }
+    work__projects__cotainer.classList.add("ani-out");
+
+    setTimeout(()=>{
+        projects.forEach((project)=>{
+            if(filter === "*" || filter === project.dataset.type){
+                project.classList.remove("invisible");
+            }else{
+                project.classList.add("invisible");
+            }
+        });
+        work__projects__cotainer.classList.remove("ani-out");
+    },300)
+});
+
+
+
+
 function scrollintoViews(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:"smooth"});
