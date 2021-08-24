@@ -13,4 +13,16 @@ document.addEventListener('scroll', () => {
 });
 
 // handle scrolling when tapping on nav-munu
+const navbar_munu = document.querySelector(".navbar__menu");
+
+navbar_munu.addEventListener("click", (event)=>{
+    const target = event.target.dataset.link;
+    if(target == null){
+        return;
+    }
+
+    const scrollTo = document.querySelector(target);
+    scrollTo.scrollIntoView({behavior:"smooth"});
+});
+
 
