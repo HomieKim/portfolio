@@ -14,12 +14,18 @@ document.addEventListener('scroll', () => {
 
 // handle scrolling when tapping on nav-munu
 const navbar_munu = document.querySelector(".navbar__menu");
+// navbar toggle button for samll screen
+const navbar_toggle_btn = document.querySelector(".navbar__toggle__btn");
+navbar_toggle_btn.addEventListener("click", ()=> {
+    navbar_munu.classList.toggle('open');
+});
 
 navbar_munu.addEventListener("click", (event)=>{
     const target = event.target.dataset.link;
     if(target == null){
         return;
     }
+    navbar_munu.classList.remove('open');
     scrollintoViews(target);
 });
 
@@ -83,6 +89,11 @@ work__btn__container.addEventListener("click", (event)=>{
     if(filter === null){
         return;
     }
+    // project selected 
+    const selected = document.querySelector(".categories__btn.selected");
+    selected.classList.remove("selected");
+    const target = event.target.nodeName === "BUTTON" ? event.target : event.target.parentNode;
+    target.classList.add("selected");
     work__projects__cotainer.classList.add("ani-out");
 
     setTimeout(()=>{
@@ -96,6 +107,9 @@ work__btn__container.addEventListener("click", (event)=>{
         work__projects__cotainer.classList.remove("ani-out");
     },300)
 });
+
+
+
 
 
 
